@@ -1,0 +1,104 @@
+body {
+    text-align: center;
+    background: #141415;
+    color: #fff;
+    font-size: 10px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+}
+
+.page-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 600px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    display: inline-block;
+    max-width: max-content;    /* 文字幅だけに */
+    font-size: 26px;
+    background-image: linear-gradient(#14141500 70%, #e06969 70%);
+}
+
+.grid-3x3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto 20px;    /* 中央寄せ */
+    width: fit-content;    /* 内容に合わせて幅を調整 */
+    gap: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.grid-4x {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.slot {
+    position: relative;
+    width: 100px;
+    height: 125px;
+    border: 2px solid #e06969;
+    background: #ffffff22;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;   /* 画像のはみ出し防止 */
+    padding: 20px 5px 5px;
+}
+
+.slot .slot-rank {
+    position: absolute;
+    display: inline-block;
+    top: -2px;
+    left: -2px;
+    padding: 0 9px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 17px;
+    background: #e06969;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.slot.filled img {
+    width: 90px;
+    object-fit: cover;
+}
+
+.slot.filled p {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.roster-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 20px 5px 5px;
+}
+
+.roster-item img {
+    width: 100px;
+    object-fit: cover;
+}
+
+.roster-item p {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.roster-item.selected {
+    background: #ffffff44;
+    border-radius: 5px;
+}
