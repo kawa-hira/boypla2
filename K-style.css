@@ -14,12 +14,9 @@ body {
 }
 
 .content {
-  width: 100%;
-  max-width: 600px; /* 最大幅を600pxに */
+  width: 600px;
   padding: 20px;
-  margin: 0 auto;   /* 中央寄せ */
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  box-sizing: border-box;
 }
 
 h1 {
@@ -30,26 +27,32 @@ h1 {
 }
 
 .grid-3x3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  width: 100%;
-  max-width: 400px; /* スマホで見やすくするため最大幅を調整 */
-  margin: 0 auto 20px;
-  gap: 10px;
-  box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto 20px;    /* 中央寄せ */
+    width: fit-content;    /* 内容に合わせて幅を調整 */
+    gap: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.grid-4x {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
 
 .slot {
     position: relative;
-    width: 100%;
-    aspect-ratio: 4/5; /* 縦横比を維持（例: 幅:高さ = 4:5） */
+    width: 100px;
+    height: 125px;
     border: 2px solid #81b3ff;
     background: #ffffff22;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: hidden;   /* 画像のはみ出し防止 */
     padding: 20px 5px 5px;
 }
 
@@ -68,22 +71,13 @@ h1 {
 }
 
 .slot.filled img {
-  width: 90%;
-  object-fit: cover;
+    width: 90px;
+    object-fit: cover;
 }
 
 .slot.filled p {
     margin-top: 5px;
     text-align: center;
-}
-
-.grid-4x {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  width: 100%;
-  max-width: 500px; /* スマホで見やすくするため最大幅を調整 */
-  margin: 0 auto;
 }
 
 .roster-item {
@@ -95,9 +89,8 @@ h1 {
 }
 
 .roster-item img {
-  width: 100%;
-  max-width: 100px;
-  object-fit: cover;
+    width: 100px;
+    object-fit: cover;
 }
 
 .roster-item p {
